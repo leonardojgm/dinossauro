@@ -7,13 +7,17 @@ let tamanhoObjetos = 100;
 let fimTela = document.body.clientWidth;
 let pontos = 0;
 
-function comandarPulo(event) {
+function verificarTecla(event) {
     if (event.keyCode === 32) {
-        if (!pulando) {
-            pulando = true;
+        comandarPulo();
+    }
+}
 
-            pular();
-        }
+function comandarPulo() {
+    if (!pulando) {
+        pulando = true;
+
+        pular();
     }
 }
 
@@ -73,4 +77,6 @@ function criarCacto() {
 
 criarCacto();
 
-document.addEventListener('keyup', comandarPulo);
+document.addEventListener('keyup', verificarTecla);
+document.addEventListener('touchstart', comandarPulo);
+document.addEventListener('click', comandarPulo);
