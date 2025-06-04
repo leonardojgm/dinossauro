@@ -1,0 +1,69 @@
+body {
+    background: #fafafa;
+}
+
+h1 {
+    text-align: center;
+    color: #666666;
+    margin-top: 50px;
+    font-family: arial;
+}
+
+button {
+    background: #666666;
+    color: #fafafa;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes rolarfundo {
+    from {
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0;
+    }
+}
+
+.fundo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    /* background: blue; */
+    background-repeat: repeat-x;
+    background-image: url(background.png);
+    animation: rolarfundo 600s infinite linear;
+}
+
+.dino {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    /* background: green; */
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-image: url(dino.png);
+}
+
+.cacto {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    /* background: red; */
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-image: url(cactus.png);
+}
